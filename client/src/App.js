@@ -74,6 +74,11 @@ function App() {
       </button>} />
     }
   }
+
+  const LOGIN_URI =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:8888/login'
+    : 'https://afro-category-spotify.herokuapp.com/login';
       
   return (
     <div className="App">

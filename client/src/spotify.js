@@ -97,8 +97,9 @@ export const getCurrentUserProfile = () => axios.get('/me');
 
 export const getAfrobeatsPlaylists = () => axios.get(`browse/categories/${categoryID}/playlists`);
 
-export const getFullSongList = () => axios.get(`/v1/playlists/${playlistIds}/tracks`);
 const playlistIds = []
+export const getFullSongList = () => axios.get(`/v1/playlists/${playlistIds}/tracks`);
+
 
 
 
