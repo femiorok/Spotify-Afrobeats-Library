@@ -9,6 +9,7 @@ const port = 8888;
 
 app.get('/', (req, res) => {
   res.send('Hello World! :)');
+  console.log(CLIENT_SECRET)
 });
 
 app.listen(port, () => {

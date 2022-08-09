@@ -1,22 +1,16 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
 
 
-function PlaylistCard({ playlists }) {
-  const [playlistInfo, setPlaylistInfo] = useState([]);
+function PlaylistCard({ playlistObject, index, id }) {
 
-  useEffect(() => {
-    playlistInfo.push(playlists);
-    console.log(playlistInfo)
   
-  }, [playlists]);
-
   return (
     <div>
-      {playlistInfo.length > 0 && 
-      <img src={playlists.data.playlists.items.images}></img>
-      }
-      </div>
+      <a href={playlistObject.external_urls.spotify}>
+      <img src={playlistObject.images[0].url} alt='Playlist cover' className="h-48 hover:animate-pulse"></img>
+      <h1>{id}</h1>
+      </a>
+    </div>
   )
 }
 
